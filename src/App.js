@@ -11,14 +11,16 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Cazzo Pizza</h1>
-        <Link to="/">All Pizzas</Link>
-        <Link to="/cart">Your order &#128722;</Link>
+        <nav className="links">
+        <Link to="/"><p>All Pizzas</p></Link>
+        <Link to="/cart"><p>Your order</p></Link>
+        </nav>
       </header>
       <main>
       <Route exact path="/">
           <PizzaList></PizzaList>
       </Route>
-      
+
       <Route path="/cart">
           <Cart></Cart>
         </Route>
