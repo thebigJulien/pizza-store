@@ -4,15 +4,15 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      .cart {
+      .card {
         border: 1px solid black;
         width: 50%;
         margin-top: 10px;
         padding: 10px 0;
         background-color: rgb(166, 212, 166);
         img {
-          height: 200px;
-
+          width: 100%;
+          margin-top: -10px;
         }
       }
     }

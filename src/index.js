@@ -4,13 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import PizzasProvider from './store/pizzaContext';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 ReactDOM.render(
-<PizzasProvider>
-    <App />
-  </PizzasProvider>,
-    document.getElementById('root')
+  <Router>
+    <PizzasProvider>
+      <App />
+    </PizzasProvider>
+  </Router>
+  ,document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

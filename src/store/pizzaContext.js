@@ -13,7 +13,15 @@ const PizzasProvider = (props) => {
             {id: 3, name: "pizza Meln", price: "10,90€", description: "the Germans love it", image: "https://cdn.pixabay.com/photo/2018/04/07/15/03/pizza-3298685_960_720.jpg"}
     ])
 
-    let sharedData = {pizzas};
+    const [ cart, setCart ] = useState([])
+
+    const addPizzaToCart = (pizza) => {
+        let pizzasInCart = [...cart, pizza]
+        console.log(pizzasInCart);
+        setCart( pizzasInCart )
+      }
+
+    let sharedData = {pizzas, addPizzaToCart};
 
     return (
         <PizzaContext.Provider value={sharedData}>
